@@ -48,7 +48,7 @@
 		.topnav a:hover {
 			color: white;
 			background-color: #555555;
-			transition: 0.2s;
+			transition: 0.9s;
 			border-bottom: 2px solid white;
 			border-top: 2px solid white;
 			}	
@@ -114,16 +114,57 @@
 				
 	
 		.Lemur {
-			display:block;
 			height: auto;
-			width: 80%;
+			width: 100%;
+			padding-top: 10px;
+			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			padding-top: 10px;
-			position: relative;
 			}
 			
-			
+		.container {
+		  position: relative;
+		  width: 100%;
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		}
+
+		.overlay {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  height: 100%;
+		  width: 100%;
+		  opacity: 0;
+		  transition: .5s ease;
+		  margin-top: 20px;
+		  
+
+		}
+
+		.container:hover .overlay {
+		  background-color: #e2e2e2;
+		  height: 97%;
+		  opacity: 0.5;
+		}
+
+		.words {
+		  color: #000;
+		   font-weight: bold;
+		  font-size: 1em;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  text-align: center;
+		font-family: 'PT Sans', sans-serif;
+		  
+		  
+		}  
 		.Zoboomafoo {
 			width: 80%;
 			height: auto;
@@ -182,13 +223,13 @@
 			top: -600px;
 			position: relative;
 			margin-left: 100px;
-			background-color: ;
+			
 		}
 
 		
 		.icon-bar {
   position: fixed;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -252,10 +293,69 @@
 		}
 		
 		
+			
+
+.containerslideshow {
+  width: 350px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  
+  
+}
+
+.containerslideshow img {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: transform 0.5s;
+
+}
+
+input {
+  display: inline-block;
+  position: relative;
+  top: 180px;
+  z-index: 10;
+}
+
+input:checked ~ img {
+  transform: translateX(200%);
+}
+
+input:checked + img {
+  transform: translateX(100%);
+}
+		
+
+	
+		
+		@media screen and (min-width: 700px) {
+		
+		.container {
+		  position: relative;
+		  width: 65%;
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		}
 		
 		
+		.containerslideshow {
+			margin-top: 80px;
+		}
+		
+		
+		
+		
+		}
 		
 		@media screen and (max-width: 700px) {
+		
+		
+		
 		.topnav {
 			width: 100%;
 			text-align: left;
@@ -310,6 +410,7 @@
 			padding: 10px;
 			width: 100%;
 			height: auto;
+			
 		}
 		
 			
@@ -325,6 +426,17 @@
 		.header {
 			width: 100%;
 			margin: auto;
+		}
+		
+		
+		.containerslideshow  {
+			width: 100%;
+		}
+		
+		
+		.containerslideshow img {
+			width: 100%;
+			margin-top: 30px;
 		}
 		
 		

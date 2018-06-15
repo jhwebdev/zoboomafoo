@@ -8,6 +8,14 @@ function myFunction() {
 }
 
 
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 
 var myIndex = 0;
 carousel();
@@ -21,7 +29,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 1500); 
+    setTimeout(carousel, 2000); 
 }
 
 
